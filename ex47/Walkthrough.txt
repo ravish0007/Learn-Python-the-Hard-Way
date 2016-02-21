@@ -1,0 +1,77 @@
+Copy skeleton to ex47
+➜  ex47  cp -r ../ex46/projects/skeleton/* .
+➜  ex47  ls
+bin  docs  NAME  setup.py  tests
+➜  ex47  
+
+Rename everything with NAME to ex47.
+➜  ex47  grep -r NAME *
+Binary file NAME/__init__.pyc matches
+setup.py:    'packages': ['NAME'],
+tests/NAME_tests.py:import NAME
+Binary file tests/NAME_tests.pyc matches 
+➜  ex47  mv tests/NAME_tests.py tests/ex47_tests.py
+➜  ex47  mv NAME/ ex47/
+
+Change the word NAME in all the files to ex47.
+➜  ex47  nano setup.py
+➜  ex47  nano tests/ex47_tests.py
+
+Finally, remove all the *.pyc files to make sure you're clean.
+find . -name "*.pyc" -print 
+find . -name "*.pyc" -exec rm {} \;
+
+Project Structure
+➜  ex47  ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
+   .
+   |-bin
+   |-docs
+   |-ex47
+   |-tests
+➜  ex47  
+➜  ex47  ls -lah *
+-rw-rw-r-- 1 devmac devmac  414 Feb 19 07:21 setup.py
+
+bin:
+total 8.0K
+drwxrwxr-x 2 devmac devmac 4.0K Feb 19 07:18 .
+drwxrwxr-x 6 devmac devmac 4.0K Feb 19 07:30 ..
+
+docs:
+total 8.0K
+drwxrwxr-x 2 devmac devmac 4.0K Feb 19 07:18 .
+drwxrwxr-x 6 devmac devmac 4.0K Feb 19 07:30 ..
+
+ex47:
+total 12K
+drwxrwxr-x 2 devmac devmac 4.0K Feb 19 07:30 .
+drwxrwxr-x 6 devmac devmac 4.0K Feb 19 07:30 ..
+-rw-rw-r-- 1 devmac devmac  295 Feb 19 07:22 game.py
+-rw-rw-r-- 1 devmac devmac    0 Feb 19 07:18 __init__.py
+
+tests:
+total 12K
+drwxrwxr-x 2 devmac devmac 4.0K Feb 19 07:30 .
+drwxrwxr-x 6 devmac devmac 4.0K Feb 19 07:30 ..
+-rw-rw-r-- 1 devmac devmac   85 Feb 19 07:27 ex47_tests.py
+-rw-rw-r-- 1 devmac devmac    0 Feb 19 07:18 __init__.py
+➜  ex47
+
+Run Nosetests
+➜  ex47  nosetests
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+OK
+➜  ex47  
+
+Preparing nosetests
+➜  ex47  nano tests/ex47_tests.py
+➜  ex47  nosetests               
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.004s
+
+OK
+➜  ex47  

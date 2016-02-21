@@ -1,0 +1,7 @@
+https://github.com/
+http://sourceforge.net/
+https://launchpad.net/
+https://bitbucket.org/
+
+https://github.com/zedshaw/lamson
+https://github.com/zedshaw/python-lust

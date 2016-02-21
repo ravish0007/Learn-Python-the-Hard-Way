@@ -1,0 +1,66 @@
+self
+Inside the functions in a class, self is a variable for the instance/object being accessed.
+
+OOPs Phrases
+class X(Y)
+"Make a class named X that is-a Y."
+class X(object): def __init__(self, J)
+"class X has-a __init__ that takes self and J parameters."
+class X(object): def M(self, J)
+"class X has-a function named M that takes self and J parameters."
+foo = X()
+"Set foo to an instance of class X."
+foo.M(J)
+"From foo get the M function, and call it with parameters self, J."
+foo.K = Q
+"From foo get the K attribute and set it to Q."
+
+
+What does result = sentence[:] do?
+That's a Python way of copying a list. You're using the list slice syntax [:] to effectively make a slice from the very first element to the very last one.
+
+Output ->
+➜  LPTHW  python oop_test.py english
+Set donkey to an instance of class Downtown.
+> donkey = Downtown()
+ANSWER:  donkey = Downtown()
+
+From decision get the apple attribute and set it to 'bread'.
+> decision.apple = 'bread'
+ANSWER:  decision.apple = 'bread'
+
+Set aunt to an instance of class Bit.
+> aunt = class Bit()
+ANSWER:  aunt = Bit()
+
+From back get the cap function, and call it with parameters self, duck, bed, death.
+> back.cap(self, duck, bed, death)
+ANSWER:  back.cap(duck, bed, death)
+
+From amount get the corn attribute and set it to 'church'.
+> amount.corn = 'church'
+ANSWER:  amount.corn = 'church'
+
+
+class Cheese has-a __init__ that takes self and clover parameters.
+> class Cheese: def __init__(self, clover)
+ANSWER:  class Cheese(object):
+	def __init__(self, clover)
+
+class Argument has-a function named camp that takes self and bone, children parameters.
+> class Argument(object): def camp(self, bone, children)
+ANSWER:  class Argument(object):
+	def camp(self, bone, children)
+
+From dog get the dad function, and call it with parameters self, drug.
+> dog.dad(self, drug)
+ANSWER:  dog.dad(drug)
+
+
+Make a class named Credit that is-a Amusement.
+> class Credit(Amusement):
+ANSWER:  class Credit(Amusement):
+
+List Comprehension
+Use for loop in a list
+http://www.secnetix.de/olli/Python/list_comprehensions.hawk
